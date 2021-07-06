@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>colors</title>
+
+  <style>
+    body{
+	margin: 0;
+    }
+    div{
+	width: 6%;
+	height: 30px;
+	display: inline-block;
+	margin: -1px 1px -1px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script>
+
+    for(let i=0 ; i < 256 ; i = i+10){
+        for(let j = 0 ; j < 256 ; j = j+10 ){
+            for(let k = 0 ; k < 256 ; k = k + 10){
+                var div = document.createElement("div");
+                div.style.backgroundColor = "rgb("+j+","+i+","+k+")";
+                document.body.appendChild(div); 
+		div.addEventListener("click",function(){
+		    alert(this.style.backgroundColor);
+		});
+            }        
+              
+        }
+    }
+
+  </script>
+</body>
+</html>
